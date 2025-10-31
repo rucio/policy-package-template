@@ -4,6 +4,7 @@ def get_algorithms():
     from yourvo_rucio_policy_package.non_deterministic_pfn import YourVONonDeterministicPFNAlgorithm
     from yourvo_rucio_policy_package.scope import YourVOScopeExtractionAlgorithm
     from yourvo_rucio_policy_package.lfn2pfn import YourVORSEDeterministicTranslation
+    from yourvo_rucio_policy_package.pfn2lfn import YourVORSEDeterministicScopeTranslation
     from yourvo_rucio_policy_package.tape_metadata import YourVOTapeMetadataPlugin
     return { 
         'non_deterministic_pfn': {
@@ -11,6 +12,9 @@ def get_algorithms():
             },
         'lfn2pfn': {
             'yourvo_lfn2pfn': YourVORSEDeterministicTranslation.lfn2pfn_yourvo
+            },
+        'pfn2lfn': {
+            'yourvo_pfn2lfn': YourVORSEDeterministicScopeTranslation.pfn2lfn_yourvo
             },
         'scope': { 
             'yourvo_extract_scope': YourVOScopeExtractionAlgorithm.extract_scope_yourvo
