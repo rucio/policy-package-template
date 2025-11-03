@@ -19,5 +19,5 @@ license = {file = "LICENSE"}
 
 [project.optional-dependencies]
 dev = [
-    "rucio @ git+https://github.com/rucio/rucio@master"
+    "rucio>=35.5.0"
 ]
