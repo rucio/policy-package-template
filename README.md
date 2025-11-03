@@ -45,5 +45,9 @@ For example, a `belleii-rucio-policy-package` could be listed like this:
 belleii-rucio-policy-package @ git+https://github.com/rucio/temporary-belle2-policy-package@v0.1.1
 ```
 
+## Default algorithms
+Rucio supports [default algorithms for policy packages](https://rucio.github.io/documentation/operator/policy_packages/policy-package-algorithms#default-algorithms), to simplify the configuration process.
+In this template, the `lfn2pfn` algorithm is defined as a default algorithm.
+
 ## Resources
 - [Rucio documentation for policy packages](https://rucio.github.io/documentation/operator/policy_packages/policy_packages_overview/)
