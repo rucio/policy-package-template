@@ -11,6 +11,18 @@ This repository includes a template policy package that is ready to be customise
 This template provides a GitHub Action workflow for building and publishing a policy package to PyPI;
 you can trigger this action by publishing a new release on GitHub.
 
+### Requirements for publishing to PyPI
+The GitHub Action uses the [Trusted Publishers](https://docs.pypi.org/trusted-publishers/) workflow,
+recommended by PyPI.
+
+If you wish to release to PyPI:
+- If your policy package already exists as a PyPI project, 
+follow [these instructions](https://docs.pypi.org/trusted-publishers/adding-a-publisher/)
+to add a new Trusted Publisher to your project.
+- If your your policy package does not yet exist as a PyPI project,
+follow [these instructions](https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/)
+to create a new PyPI project with a Trusted Publisher.
+
 ## Pointing to your policy package as a requirement
 Once released, you can specify your policy package as a requirement
 by either pointing to its published distribution on PyPI
@@ -51,3 +63,11 @@ In this template, the `lfn2pfn` algorithm is defined as a default algorithm.
 
 ## Resources
 - [Rucio documentation for policy packages](https://rucio.github.io/documentation/operator/policy_packages/policy_packages_overview/)
+
+## Troubleshooting
+
+### `invalid-publisher`: valid token, but no corresponding publisher (Publisher with matching claims was not found)
+During the publishing stage, this error likely indicates that PyPI was not correctly configured
+to accept this repository's workflow as a Trusted Publisher.
+Make sure to follow the instructions in the [PyPI requirements section](#requirements-for-publishing-to-pypi)
+before running the publish workflow.
