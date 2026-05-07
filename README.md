@@ -1,6 +1,8 @@
 # Template for Rucio policy packages
 This repository includes a template policy package that is ready to be customised and used.
 
+Responsible for PR merging in [rucio/policy-package-template](https://github.com/rucio/policy-package-template/): [James Perry](https://github.com/jamesp-epcc)
+
 ## Steps
 1. Create a new repository using this template
 2. Rename the folder within `src/` to the name of your policy package
